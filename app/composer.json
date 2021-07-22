@@ -1,0 +1,15 @@
+{
+  "name": "lokalise/assignment-php",
+  "description": "Lokalise homework for PHP developers",
+  "type": "project",
+  "authors": [
+    {
+      "name": "Arturs Ziborovs",
+      "email": "arthur@lokalise.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "php": "^7.4.8"
+  }
+}
