@@ -11,7 +11,7 @@ The goal of our little TMS is to allow multiple different `Translation` texts in
 In order to perform requests to the API, an authentication token must be provided. A token can have either `read` or `read/write` access.
 
 ### Entities
-You would need to create the following entities (feel free add to or modify them if you think it would benefit the final result):
+You would need to create the following entities (feel free to add or modify them if you think it would benefit the final result):
 #### Language
 - Has a name
 - Has an ISO code
