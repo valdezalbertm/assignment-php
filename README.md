@@ -10,7 +10,8 @@ The goal of our little TMS is to allow multiple different `Translation` texts in
 
 In order to perform requests to the API, an authentication token must be provided. A token can have either `read` or `read/write` access.
 
-You would need to create the following entities (feel free to them if you think it would benefit the final result):
+### Entities
+You would need to create the following entities (feel free add to or modify them if you think it would benefit the final result):
 #### Language
 - Has a name
 - Has an ISO code
@@ -29,7 +30,7 @@ You would need to create the following entities (feel free to them if you think 
 - Is unique
 - Can have `read` or `read/write` access
 
-## API Functionality
+### API Functionality
 - API token authentication
 - List available languages
 - Manage `Keys`
@@ -55,9 +56,15 @@ You would need to create the following entities (feel free to them if you think 
         <language2.iso>:
             <key.name>: <translation.value>
             ...
-## Notes
-- You can use any PHP framework you are comfortable with (though using Symfony will be concidered a plus)
-- Unit tests will be concidered a plus
+### Submitting the task
+- This repository should be forked and the final result should be submitted as a link to that fork
+- SQL of the final database structure/data should be included
+- If you change the development environment, make sure you include instructions on how to run the final result
+
+### Notes
+- You can use any PHP framework you are comfortable with (though using Symfony will be considered a plus)
+- The quality and structure of the code is important, so use the best coding practices you know
+- Unit tests will be considered a plus
 
 ## Included development environment
 You can find a simple Dockerized development environment included with this assignment. Please follow the steps below to set it up (or use your own environment, however, please make sure to include instructions on how to run it).
@@ -66,6 +73,8 @@ You can find a simple Dockerized development environment included with this assi
 + [Mac](https://docs.docker.com/docker-for-mac/)
 + [Debian](https://docs.docker.com/engine/installation/linux/docker-ce/debian/)
 + [Docker Compose](https://docs.docker.com/compose/install/)
+
+Bonus: [Linux Post-install](https://docs.docker.com/engine/installation/linux/linux-postinstall/)
 
 #### 2. Build the containers and bring them online
 - Make sure that Docker is running
