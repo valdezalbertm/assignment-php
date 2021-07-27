@@ -1,12 +1,12 @@
 # Lokalise PHP homework
 Hello and welcome!
 
-Your task is to create a simple REST API for a mini Translation Management System (TMS) plus the underlying MySQL database structure. You will have a Dockerized development environment as well as a couple of tools provided to get you started, however, you have full creative freedom in chosing the way you want to complete this task.
+Your task is to create a simple REST API for a mini Translation Management System (TMS) plus the underlying MySQL database structure. You will have a Dockerized development environment as well as a couple of tools provided to get you started, however, you have full creative freedom in choosing the way you want to complete this task.
 
 **Please read the description carefully.**
 
 ## Description
-The goal of our little TMS is to allow multiple different `Translation` texts in different `Languages` to be linked to a single `Key`. For example you can have a `Key` with the name `main.title` with `Hello world` and `Hallo Welt` translations for Englist and German respectively.
+The goal of our little TMS is to allow multiple different `Translation` texts in different `Languages` to be linked to a single `Key`. For example, you can have a `Key` with the name `main.title` with `Hello world` and `Hallo Welt` translations for English and German respectively.
 
 In order to perform requests to the API, an authentication token must be provided. A token can have either `read` or `read/write` access.
 
