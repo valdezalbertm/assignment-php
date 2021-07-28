@@ -59,11 +59,11 @@ You would need to create the following entities (feel free to add or modify them
 ### Submitting the task
 - This repository should be forked and the final result should be submitted as a link to that fork
 - SQL of the final database structure/data should be included
-- If you change the development environment, make sure you include instructions on how to run the final result
+- If you change the development environment, please make sure that you include some instructions on how to run the final result
 
 ### Notes
-- You can use any PHP framework you are comfortable with (though using Symfony will be considered a plus)
-- The quality and structure of the code is important, so use the best coding practices you know
+- You can use any PHP framework that you are comfortable with (though using Symfony will be considered a plus)
+- The quality and structure of the code is important, so use the best coding practices that you know
 - Unit tests will be considered a plus
 
 ## Included development environment
