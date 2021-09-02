@@ -1,11 +1,19 @@
 {
-    "name": "laravel/laravel",
+    "name": "lokalise/assignment-php",
+    "description": "Lokalise homework for PHP developers",
+    "keywords": [
+        "framework",
+        "laravel"
+    ],
     "type": "project",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
-    "license": "MIT",
+    "authors": [
+        {
+            "name": "Arturs Ziborovs",
+            "email": "arthur@lokalise.com"
+        }
+    ],
     "require": {
-        "php": "^7.3|^8.0",
+        "php": "^7.4.8",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.54",
@@ -57,6 +65,5 @@
         "preferred-install": "dist",
         "sort-packages": true
     },
-    "minimum-stability": "dev",
     "prefer-stable": true
 }
