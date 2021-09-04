@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: mysql
--- Generation Time: Sep 04, 2021 at 04:46 PM
+-- Generation Time: Sep 04, 2021 at 05:18 PM
 -- Server version: 5.7.18
 -- PHP Version: 7.4.23
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `tms`
 --
+CREATE DATABASE IF NOT EXISTS `tms` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `tms`;
 
 -- --------------------------------------------------------
 
