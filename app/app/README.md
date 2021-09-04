@@ -15,9 +15,9 @@
 
     `docker-compose exec php bash -c "php composer.phar install"`
 
-# MySQL Database
+5. Import database
 
-You can find the .sql database file at `assignment-php/database/tml.sql`
+    You can find the .sql database file at `assignment-php/database/tml.sql`
 
 # How to Run Test
 
