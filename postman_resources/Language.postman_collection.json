@@ -1,0 +1,40 @@
+{
+	"info": {
+		"_postman_id": "fdf5a49e-7378-4d82-9c83-fca35bb44bfe",
+		"name": "Language",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "List Languages",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "RtjdNTbfafPsNc7EJL6Bxmv7Cehbjnfj",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1/language",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"path": [
+						"language"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

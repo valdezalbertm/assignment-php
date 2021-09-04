@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "8dfdcde2-03f1-4a4e-9884-c93decfe0a65",
+		"name": "Test Token",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Test Read Only Token (Error)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "pTQLj5b8Kk2ZjXEEPmG38UeP4pH9rQqA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "language_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "key_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "value",
+							"value": "World3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1/translation",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"path": [
+						"translation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test Read And Write Access Token",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "RtjdNTbfafPsNc7EJL6Bxmv7Cehbjnfj",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "language_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "key_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "value",
+							"value": "World3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1/translation",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"path": [
+						"translation"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

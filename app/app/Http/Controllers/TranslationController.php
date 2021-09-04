@@ -20,6 +20,7 @@ use ZipArchive;
 
 class TranslationController extends Controller
 {
+    public const INVALID_FORMAT_ERROR = 'Invalid format. Must be among yml, yaml, and json';
     private const YML_FILENAME = 'translations.yml';
 
     public function update(TranslationRequest $request): JsonResponse
@@ -51,7 +52,7 @@ class TranslationController extends Controller
     {
         if (! Str::contains($request->format, ['json', 'yml', 'yaml'])) {
             return response()->json(
-                'Invalid format. Must be among yml, yaml, and json',
+                self::INVALID_FORMAT_ERROR,
                 Response::HTTP_UNPROCESSABLE_ENTITY
             );
         }
