@@ -11,7 +11,9 @@ use App\Models\Translation;
 use Exception;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Str;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
 use Symfony\Component\Yaml\Yaml;
 use ZipArchive;
@@ -41,9 +43,19 @@ class TranslationController extends Controller
         return response()->json($translation);
     }
 
-    public function export(Request $request): BinaryFileResponse
+    /**
+     * @return mixed BinaryFileResponse|JsonResponse This will return a file when format is valid
+     *     and return JsonResponse when format is not in the list
+     */
+    public function export(Request $request)
     {
-        $this->validate($request, ['format' => 'required|in:json,yml,yaml']);
+        if (! Str::contains($request->format, ['json', 'yml', 'yaml'])) {
+            return response()->json(
+                'Invalid format. Must be among yml, yaml, and json',
+                Response::HTTP_UNPROCESSABLE_ENTITY
+            );
+        }
+
         $zip_filename = $this->getArchivedFileName($request->format);
 
         return response()->download($zip_filename);

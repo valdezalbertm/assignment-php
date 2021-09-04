@@ -11,6 +11,17 @@ use Illuminate\Http\Response;
 
 class TokenAccessMiddleware
 {
+    public const INVALID_TOKEN_ERROR = 'Invalid Token';
+    public const ACCESS_READ_ONLY_ERROR = 'Access Limited to Read Only';
+    public const INVALID_METHOD_ERROR = 'Invalid Method';
+    public const MISSING_TOKEN_ERROR = 'Missing Token';
+
+    private const WRITE_REQUEST_METHODS = [
+        Request::METHOD_PUT,
+        Request::METHOD_POST,
+        Request::METHOD_DELETE,
+    ];
+
     /**
      * Handle an incoming request.
      *
@@ -18,16 +29,6 @@ class TokenAccessMiddleware
      * @param  \Closure  $next
      * @return mixed
      */
-    private const WRITE_REQUEST_METHODS = [
-        Request::METHOD_PUT,
-        Request::METHOD_POST,
-        Request::METHOD_DELETE,
-    ];
-    private const INVALID_TOKEN_ERROR = 'Invalid Token';
-    private const ACCESS_READ_ONLY_ERROR = 'Access Limited to Read Only';
-    private const INVALID_METHOD_ERROR = 'Invalid Method';
-    private const MISSING_TOKEN_ERROR = 'Missing Token';
-
     public function handle(Request $request, Closure $next)
     {
         $method = $request->getMethod();

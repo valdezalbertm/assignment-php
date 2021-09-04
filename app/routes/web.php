@@ -23,7 +23,7 @@ Route::get('/', function () {
 
 Route::group(['middleware' => 'token'] , function () {
     Route::resource('/key', KeyController::class)->only(['index', 'destroy', 'update', 'store', 'show']);
-    Route::get('language', LanguageController::class);
-    Route::put('translation', 'App\Http\Controllers\TranslationController@update');
-    Route::get('translation/export', 'App\Http\Controllers\TranslationController@export');
+    Route::get('language', LanguageController::class)->name('language.get');
+    Route::put('translation', 'App\Http\Controllers\TranslationController@update')->name('translation.update');
+    Route::get('translation/export', 'App\Http\Controllers\TranslationController@export')->name('translation.export');
 });
