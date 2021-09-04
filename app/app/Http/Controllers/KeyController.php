@@ -41,6 +41,7 @@ class KeyController extends Controller
         $key = Key::where('name', $request->name)->exists();
         if ($key) {
             $response = self::KEY_ALREADY_EXISTS_WARN;
+            $status_code = Response::HTTP_OK;
         } else {
             $response = Key::create(['name' => $request->name]);
             $status_code = Response::HTTP_CREATED;

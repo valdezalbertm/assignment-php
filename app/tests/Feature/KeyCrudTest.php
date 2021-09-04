@@ -87,4 +87,28 @@ class KeyCrudTest extends TestCase
 
         $this->assertDatabaseHas('keys', ['name' => $random_text]);
     }
+
+    public function testDuplicateKey()
+    {
+        $bearer_token = $this->createReadWriteAccessToken();
+
+        $random_text = Str::uuid()->toString();
+        $response = $this
+            ->withToken($bearer_token)
+            ->post(
+                route('key.store'),
+                ['name' => $random_text]
+            );
+        $response->assertStatus(Response::HTTP_CREATED);
+        $this->assertDatabaseHas('keys', ['name' => $random_text]);
+
+        $response = $this
+            ->withToken($bearer_token)
+            ->post(
+                route('key.store'),
+                ['name' => $random_text]
+            );
+        $response->assertStatus(Response::HTTP_OK);
+        $this->assertDatabaseHas('keys', ['name' => $random_text]);
+    }
 }
