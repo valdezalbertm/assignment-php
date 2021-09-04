@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Feature;
 
+use App\Http\Controllers\TranslationController;
 use App\Models\Language;
 use Illuminate\Http\Response;
 use Tests\TestCase;
@@ -17,7 +18,8 @@ class ExportTranslationTest extends TestCase
         $response = $this
             ->withToken($bearer_token)
             ->get(route('translation.export', ['format' => 'xml']));
-        $response->assertStatus(Response::HTTP_FOUND);
+        $response->assertStatus(Response::HTTP_UNPROCESSABLE_ENTITY);
+        $this->assertEquals(TranslationController::INVALID_FORMAT_ERROR, $response->json());
     }
 
     public function testExportYmlTranslation()
