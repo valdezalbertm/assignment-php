@@ -1,6 +1,6 @@
 # Preparation
 
-1. Download the repository [assignment-php](https://github.com/valdezalbertm/assignment-php)
+1. Download or clone the repository [assignment-php](https://github.com/valdezalbertm/assignment-php)
 2. Build and run docker
     ```
     docker-compose build
@@ -17,7 +17,7 @@
 
 5. Import database
 
-    You can find the .sql database file at `assignment-php/database/tml.sql`
+    You can find the .sql database file at `assignment-php/database/tms.sql`
 
 # How to Run Test
 
@@ -26,10 +26,21 @@ You can run test using this command:
 
     docker-compose exec php bash -c "php artisan test"
 
-# How to Tests Routes
+# How to Tests Routes / Import Collection via Postman
 
 Though you can see all the available routes by listing routes via `artisan` using this command:
 
     docker-compose exec php bash -c "php artisan route:list"
 
 You can just import the Postman resources, these resources are located at `assignment-php/postman_resources` folder.
+
+`Please note that when doing the request you need to add the Bearer Token for requests authentication`
+
+# To Access MySQL via PHPMyAdmin
+
+1. Go to http://127.0.0.1:8080/
+2. Use the following credentials:
+
+    Host: mysql
+    Username: root
+    Password: very-secret-assignment-password
